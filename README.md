@@ -20,5 +20,5 @@ dotnet run
 Navigate to the url and port provided, ex.:
 
 ```
-http://localhost:62810
+http://localhost:62810/home/party
 ```
