@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PartyInvites.Models.GuestResponse>
+
+@{
+    ViewData["Title"] = "Responses";
+}
+
+@Html.Partial("_Header")
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (PartyInvites.Models.GuestResponse r in Model) {
+                    <tr>
+                        <td>@r.Name</td>
+                        <td>@r.Email</td>
+                        <td>@r.Phone</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

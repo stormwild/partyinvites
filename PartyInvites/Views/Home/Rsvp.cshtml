@@ -1,0 +1,40 @@
+﻿@model PartyInvites.Models.GuestResponse
+
+@{
+    ViewData["Title"] = "RSVP";
+}
+
+@Html.Partial("_Header")
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>RSVP</h1>
+            <div asp-validation-summary="All"></div>
+            <form asp-action="Rsvp" method="post">
+                <div class="form-group">
+                    <label asp-for="Name">Your Name</label>
+                    <input type="text" class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Email</label>
+                    <input type="text" class="form-control" asp-for="Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone">Phone</label>
+                    <input type="text" class="form-control" asp-for="Phone" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="WillAttend">Will You Attend?</label>
+                    <select class="form-control" asp-for="WillAttend">
+                        <option value="">Choose an option</option>
+                        <option value="true">Yes, I'll be there</option>
+                        <option value="false">No, I can't come</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit RSVP</button>
+            </form>
+        </div>
+    </div>
+</div>

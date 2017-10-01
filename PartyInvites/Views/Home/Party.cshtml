@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Party Invites";
+}
+
+@Html.Partial("_Header")
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Greeting</div>
+                <div class="panel-body">
+                    <p>@ViewBag.Greeting</p>
+
+                    <p>We're having a party!</p>
+                    <a asp-action="Rsvp">RSVP Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
