@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -28,7 +31,8 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
-        ])
+        ]),
+        ToastModule.forRoot()
     ]
 })
 export class AppModuleShared {

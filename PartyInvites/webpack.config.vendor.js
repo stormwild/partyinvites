@@ -21,6 +21,8 @@ const nonTreeShakableModules = [
     'es6-shim',
     'event-source-polyfill',
     'jquery',
+    'ng2-toastr',
+    'ng2-toastr/ng2-toastr.css'
 ];
 const allModules = treeShakableModules.concat(nonTreeShakableModules);
 
